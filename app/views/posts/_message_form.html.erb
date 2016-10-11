@@ -1,0 +1,13 @@
+<% if current_user %>
+<form class="message">
+	<%= form_tag(:controller => "posts", :action => "create") do %>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<%= label_tag(:message, "What are you doing?") %><br />
+			<%= text_area_tag(:message, nil, :size => "60x2") %><br /> 
+    		<div style="float: right;"><%= submit_tag("Update") %></div>
+		</div>
+	</div>
+  <% end %>
+</form>
+ <% end %>

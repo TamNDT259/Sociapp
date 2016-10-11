@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+	<% if current_user %>
+    <p><b>Posted <%= time_ago_in_words(post.created_at) %> ago by <%=  %> </b></p>
+    <p><%= post.message %></p>
+<% end %>
+	</div>
+</div>
+
